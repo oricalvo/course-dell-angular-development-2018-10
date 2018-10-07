@@ -13,7 +13,6 @@ const likeOri = {
 };
 
 pool.add(ori);
-pool.add(likeOri);
 pool.add(ori);
 pool.add(ori);
 
