@@ -1,0 +1,11 @@
+<h1>Hello Angular 3</h1>
+
+<ul>
+  <li *ngFor="let contact of contacts">
+    <span>{{contact.name}}</span>
+  </li>
+</ul>
+
+<button (click)="toggle()">Toggle</button>
+
+<app-clock *ngIf="showClock"></app-clock>

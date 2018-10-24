@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let contact of contacts;trackBy: trackByFn">
+    <app-contact-details [contact]="contact"></app-contact-details>
+  </li>
+</ul>

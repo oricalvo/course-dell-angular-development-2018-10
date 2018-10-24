@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+
+<button (click)="change()">Change</button>
+
+<ul>
+  <li *ngFor="let contact of contacts">
+    <span>{{contact.name}}</span>
+  </li>
+</ul>
+
