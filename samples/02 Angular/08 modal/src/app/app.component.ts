@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ConfirmDeleteComponent} from "./confirm-delete/confirm-delete.component";
+import {ModalRef, ModalService} from "./modal.service";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,7 @@ export class AppComponent {
   }
 
   async remove(contact: Contact, index: number) {
-    const modalRef: ModalRef = this.modalService.show(ConfirmDeleteComponent);
+    const modalRef = this.modalService.show<ConfirmDeleteComponent>(ConfirmDeleteComponent);
     modalRef.instance.contact = contact;
     if(await modalRef.waitForClose()) {
       this.contacts.splice(index, 1);
@@ -25,7 +27,7 @@ export class AppComponent {
   }
 }
 
-interface Contact {
+export interface Contact {
     id: number;
     name: string;
 }

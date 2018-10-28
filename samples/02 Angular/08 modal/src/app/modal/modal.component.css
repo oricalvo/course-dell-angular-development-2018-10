@@ -1,0 +1,9 @@
+:host {
+  display: none;
+
+  border: 1px solid lightgray;
+}
+
+:host.opened {
+  display: inline-block;
+}
