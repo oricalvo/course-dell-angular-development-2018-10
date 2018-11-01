@@ -1,0 +1,9 @@
+<h1>Hello Routing</h1>
+
+<div class="site-menu">
+  <a routerLink="">Home</a>
+  <a [routerLink]="['admin',{data1: 'ori'}]">Admin</a>
+  <a (click)="gotoAbout($event)" href="">About</a>
+</div>
+
+<router-outlet></router-outlet>
